@@ -35,11 +35,9 @@ class ToDoList extends React.Component {
     }
 
     onDelete(toDoItem) {
-
         this.props.actions.removeItem(toDoItem)
     }
     changeItem(toDoItem, flag) {
-
         this.props.actions.changeItem(toDoItem, flag)
     }
     render() {
@@ -48,11 +46,11 @@ class ToDoList extends React.Component {
             <div className={style.container}>
                 <h2 className={style.h2}>Task ToDoList</h2>
 
-
                 <List dataSource={toDoList} onDelete={(toDoItem) => this.onDelete(toDoItem)} onCheck={(toDoItem, flag) => { this.changeItem(toDoItem, flag); }} />
 
                 <Editor label='Task' text={this.state.text} placeholder='Input your task' onChange={(value) => this.setState({ text: value })} />
                 {this.state.warning ? <Alert message={this.state.warning} type="error" /> : null}
+                
                 <Button style={{ float: 'right', marginTop: 15 }} type="primary" loading={this.props.loading} onClick={this.onSubmit}>
                     Submit
                 </Button>
