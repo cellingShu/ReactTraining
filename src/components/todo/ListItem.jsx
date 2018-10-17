@@ -6,7 +6,7 @@ class ListItem extends React.Component {
         return <li className={toDoItem.checked ? styles.checked : styles.unchecked} key={toDoItem.id}>
         <input type="checkbox" checked={toDoItem.checked} id={toDoItem.id} onChange={(e) => {onCheck(toDoItem,e.target.checked)}} />
         <label htmlFor={toDoItem.id}>{toDoItem.title}</label>
-        <span onClick={onDelete}>删除</span>
+        <span onClick={onDelete}>Delete</span>
       </li>;
     // return <div>   {toDoItem.title}</div>
     }

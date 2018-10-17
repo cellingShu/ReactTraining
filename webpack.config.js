@@ -1,6 +1,6 @@
 var path = require("path")
-var webpack = require('../../Library/Caches/typescript/2.9/node_modules/@types/webpack')
-var HtmlWebpackPlugin = require('../../Library/Caches/typescript/2.9/node_modules/@types/html-webpack-plugin')
+var webpack = require('webpack')
+var HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
     entry: './src/app.jsx',
